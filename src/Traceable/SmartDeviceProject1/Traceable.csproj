@@ -1,0 +1,700 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF6248EC-7AF4-4AF3-8BC2-B09D4D1B0F47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartDeviceProject1</RootNamespace>
+    <AssemblyName>SmartDeviceProject1</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.1</OSVersion>
+    <DeployDirSuffix>SmartDeviceProject1</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 5.0 Pocket PC SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllocatioinSale\LoginIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllocatioinSale\LoginIn.Designer.cs">
+      <DependentUpon>LoginIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllocatioinSale\AllocationSaleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllocatioinSale\AllocationSaleInfo.Designer.cs">
+      <DependentUpon>AllocationSaleInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BusinessException.cs" />
+    <Compile Include="Common\GlobalState.cs" />
+    <Compile Include="Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog.Designer.cs">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\ReturnDrawMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Draw\ReturnDrawMaterial.Designer.cs">
+      <DependentUpon>ReturnDrawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\DrawMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Draw\DrawMaterial.Designer.cs">
+      <DependentUpon>DrawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\DrawStates.cs" />
+    <Compile Include="Draw\DrawLogic.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Input\ReturnMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\ReturnMaterial.Designer.cs">
+      <DependentUpon>ReturnMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Input\InputLogic.cs" />
+    <Compile Include="Input\InputMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Input\InputMaterial.Designer.cs">
+      <DependentUpon>InputMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MaterialModel.cs" />
+    <Compile Include="Input\ProductStates.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print.Designer.cs">
+      <DependentUpon>Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintDialog.Designer.cs">
+      <DependentUpon>PrintDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AllocatioinSale\LoginIn.resx">
+      <DependentUpon>LoginIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllocatioinSale\AllocationSaleInfo.resx">
+      <DependentUpon>AllocationSaleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog.resx">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Draw\ReturnDrawMaterial.resx">
+      <DependentUpon>ReturnDrawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Draw\DrawMaterial.resx">
+      <DependentUpon>DrawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\ReturnMaterial.resx">
+      <DependentUpon>ReturnMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\InputMaterial.resx">
+      <DependentUpon>InputMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print.resx">
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintDialog.resx">
+      <DependentUpon>PrintDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scan.resx">
+      <DependentUpon>Scan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SingleSales\SaleInfo.resx">
+      <DependentUpon>SaleInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submit.resx">
+      <DependentUpon>Submit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WareSales\WaleSalesInfo.resx">
+      <DependentUpon>WaleSalesInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scan.Designer.cs">
+      <DependentUpon>Scan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SingleSales\SaleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SingleSales\SaleInfo.Designer.cs">
+      <DependentUpon>SaleInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submit.Designer.cs">
+      <DependentUpon>Submit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WareSales\WaleSalesInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WareSales\WaleSalesInfo.Designer.cs">
+      <DependentUpon>WaleSalesInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Packaging\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\UserService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WareSaleService_Order\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Webservice1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Webservice2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ZSDI502\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ZSDI503\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ZSDI504\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ZSDI505\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ZSDI506\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.66.1.98:8000/sap/bc/srt/wsdl/srvc_54230B84D4291EC0E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ZSDI504\</RelPath>
+      <UpdateFromURL>http://10.66.1.98:8000/sap/bc/srt/wsdl/srvc_54230B84D4291EC0E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.66.1.98:8000/sap/bc/srt/wsdl/srvc_542365EBD42E1ED0E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ZSDI506\</RelPath>
+      <UpdateFromURL>http://10.66.1.98:8000/sap/bc/srt/wsdl/srvc_542365EBD42E1ED0E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.66.1.98:8000/sap/bc/srt/wsdl/srvc_54341EB7849527E0E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\WareSaleService_Order\</RelPath>
+      <UpdateFromURL>http://10.66.1.98:8000/sap/bc/srt/wsdl/srvc_54341EB7849527E0E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://114.251.177.94:8000/sap/bc/srt/wsdl/srvc_5428615AB1981C40E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\UserService\</RelPath>
+      <UpdateFromURL>http://114.251.177.94:8000/sap/bc/srt/wsdl/srvc_5428615AB1981C40E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.66.1.98:8000/sap/bc/srt/wsdl/srvc_54342378849527E0E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ZSDI502\</RelPath>
+      <UpdateFromURL>http://10.66.1.98:8000/sap/bc/srt/wsdl/srvc_54342378849527E0E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.66.1.98:8000/sap/bc/srt/wsdl/srvc_543423E3849527E0E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ZSDI503\</RelPath>
+      <UpdateFromURL>http://10.66.1.98:8000/sap/bc/srt/wsdl/srvc_543423E3849527E0E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://114.251.177.94:8000/sap/bc/srt/wsdl/srvc_54364B00224B0760E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\Webservice1\</RelPath>
+      <UpdateFromURL>http://114.251.177.94:8000/sap/bc/srt/wsdl/srvc_54364B00224B0760E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://114.251.177.94:8000/sap/bc/srt/wsdl/srvc_5438FC317FC00F20E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\Webservice2\</RelPath>
+      <UpdateFromURL>http://114.251.177.94:8000/sap/bc/srt/wsdl/srvc_5438FC317FC00F20E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://sapdev.orgcanmaking.com:8000/sap/bc/srt/wsdl/srvc_543801447FC00F20E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ZSDI505\</RelPath>
+      <UpdateFromURL>http://sapdev.orgcanmaking.com:8000/sap/bc/srt/wsdl/srvc_543801447FC00F20E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://sapdev.orgcanmaking.com:8000/sap/bc/srt/wsdl/srvc_5438FC317FC00F20E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\Packaging\</RelPath>
+      <UpdateFromURL>http://sapdev.orgcanmaking.com:8000/sap/bc/srt/wsdl/srvc_5438FC317FC00F20E10080000A420162/wsdl11/allinone/ws_policy/document%3fsap-client=500</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Packaging\document.wsdl" />
+    <None Include="Web References\Packaging\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Packaging\Zsdi501Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi502Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi503Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi504Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi505Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi506Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi507Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi508Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi509Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi510Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi511Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi512Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi513Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi514Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi515Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi516Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi517Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi518Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi519Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi520Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi521Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi522Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi523Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi524Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi525Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\Zsdi526Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Packaging\ZuserChackResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\UserService\document.wsdl" />
+    <None Include="Web References\UserService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\UserService\ZuserChackResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WareSaleService_Order\document.wsdl" />
+    <None Include="Web References\WareSaleService_Order\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WareSaleService_Order\Zsdi501Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\document.wsdl" />
+    <None Include="Web References\Webservice1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Webservice1\Zppi501Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi502Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi505Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi506Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi507Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi508Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi509Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi510Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi511Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi512Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi513Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi515Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi516Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice1\Zppi517Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\document.wsdl" />
+    <None Include="Web References\Webservice2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi501Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi502Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi503Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi504Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi505Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi506Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi507Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi508Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi509Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi510Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi511Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi512Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi513Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi514Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi515Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi516Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi517Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi518Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi519Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi520Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi521Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi522Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi523Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi524Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi525Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\Zsdi526Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Webservice2\ZuserChackResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ZSDI502\document.wsdl" />
+    <None Include="Web References\ZSDI502\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZSDI502\Zsdi502Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ZSDI503\document.wsdl" />
+    <None Include="Web References\ZSDI503\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZSDI503\Zsdi503Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ZSDI504\document.wsdl" />
+    <None Include="Web References\ZSDI504\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZSDI504\Zsdi504Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ZSDI505\document.wsdl" />
+    <None Include="Web References\ZSDI505\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZSDI505\Zsdi505Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ZSDI506\document.wsdl" />
+    <None Include="Web References\ZSDI506\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZSDI506\Zsdi506Response.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
